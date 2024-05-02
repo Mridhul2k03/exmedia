@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Example</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+  /* Your CSS styles here */
+  body {
+    background: rgba(218, 218, 218, 1);
+  }
+
+  a {
+    color: #111;
+  }
+
+  .photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+
+  .photo img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+    box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, .2);
+    display: block;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: -10px;
+  }
+
+  .photo:hover img {
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .1);
+  }
+
+  .photo .glow-wrap {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: -10px;
+  }
+
+  .photo .glow {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255, 255, 255, .2);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .photo:hover .glow {
+    transform: rotate(45deg) translate(450%, 0);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .photo:hover img,
+  .photo:hover .glow-wrap {
+    margin-top: 0;
+  }
+  h1 {
+  position: absolute;
+  z-index: 1;
+  transform: translate(-25%, -65%);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  line-height: 1.2;
+  color: white; /* Add this line */
+}
+
+
+
+  /* Ends */
+
+  #author {
+    font-family: Helvetica, Arial;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #888;
+  }
+
+  #author:hover {
+    color: #111;
+  }
+  .photo-container1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* video css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+
+/* NAVCSS */
+.icon{
+    height: 100px;
+    text-align: center;
+
+} 
+.center-text{
+    height: 50px;
+    font-weight: 200;
+    font-size: 5rem;
+}
+.center-text2{
+height: 50px;
+font-weight: 200;
+font-size: 5rem;
+}
+
+.center-text3{
+height: 50px;
+font-weight: 200;
+font-size: 6rem;
+}
+
+
+/* Your existing CSS styles for .photo and other elements */
+
+</style>
+</head>
+<body>
+    <!-- background video -->
+    <div class="video-container">
+        <video autoplay muted loop>
+          <source src="video/background2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+       
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          
+    
+          <a class="icon  text-light" href="index.html">
+            <img src="video/rolls-icon.png" class="icon" alt="Logo">
+          </a>
+         
+          
+    
+       
+          </div>
+        </div>
+      </nav>
+  <!-- First Card -->
+  <div class="photo ">
+    <a href="book.html">
+    <img src="https://mediapool.bmwgroup.com/cache/P9/202308/P90519257/P90519257-rolls-royce-droptail-build-600px.jpg" alt="Image Description" class="rounded"></a>
+    <div class="glow-wrap">
+      <i class="glow"></i>
+    </div>
+    <h1 class="text-light">DOORS</h1>
+  </div>
+
+  <!-- Second Card -->
+  <div class="photo" style="top: 70%; left: 30%;">
+    <img src="https://i.pinimg.com/originals/3d/58/d1/3d58d1aaf1c9ea33e302a609f8471f87.webp" alt="Image Description">
+    <div class="glow-wrap">
+      <i class="glow"></i>
+    </div>
+    <h1>CLUTCH LITS</h1>
+  </div>
+
+  <!-- Third Card -->
+  <div class="photo" style="top: 30%; left: 70%;">
+    <img src="https://mediapool.bmwgroup.com/cache/P9/202105/P90423772/P90423772-rolls-royce-boat-tail-600px.jpg" alt="Image Description">
+    <div class="glow-wrap">
+      <i class="glow"></i>
+    </div>
+    <h1>TAILLIGHTS</h1>
+  </div>
+
+  <!-- Footer -->
+  <div id="author">ABOUT ME</div>
+</body>
+</html>
