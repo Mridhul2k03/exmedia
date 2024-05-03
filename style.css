@@ -1,166 +1,306 @@
 
-    .icon{
-        height: 100px;
-        text-align: center;
- 
-    } 
-    .center-text{
-        height: 50px;
-        font-weight: 200;
-        font-size: 5rem;
-    }
-   .center-text2{
-    height: 50px;
-    font-weight: 200;
-    font-size: 5rem;
-   }
+.sidenav {
+  margin-top: 40px;
+  height: auto;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.215);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
 
-   .center-text3{
-    height: 50px;
-    font-weight: 200;
-    font-size: 6rem;
-   }
 
-    .l1 {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .l1 {
-    list-style: none;
-    margin: 0 15px;
-  }
-  
-  .l1 {
-    position: relative; 
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
     display: block;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    line-height: 63px;
-    background: #333;
-    border-radius: 50%;
-    font-size: 30px;
-    color: #666;
-    transition: .5s;
-  }
-  
-  .l1::before {
-    content: '';
+    background-color: #ffffff6d;
+    margin-bottom: 1px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #ffee10;
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
-  }
-  
-  .l1:hover::before {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #ffee10;
-  }
-  
-  .l1:hover {
-    color: #ffee10;
-    box-shadow: 0 0 5px #ffee10;
-    text-shadow: 0 0 5px #ffee10;
-  }
-
-
-/* whatsapp css */
-
-
-.oak-button {
-    position: fixed;
-    bottom: 20px; 
-    right: 20px; 
-    z-index: 1000; 
-  }
-  
-
-  .oak-button img {
-    width: 50px; 
-    height: auto; 
-    border-radius: 50%; 
-    
-  }
-  body{
-    background-color: rgb(25, 24, 24);
-    cursor: url('video/img1.jpg'), auto;
-  }
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
  
-/* image css */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .image {
-    position: relative;
-    margin: 10px;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .image img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .image:hover img {
-    transform: scale(1.1);
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .image:hover .overlay {
-    opacity: 1;
-  }
-  
-  .caption {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+.openbtn {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #111;
     color: white;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    overflow: hidden;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.pcontainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
+.pcontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.parallaxdigital{
+  background-image: url("");
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+.head1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  animation: slidein 2s linear ease-in-out;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateY(-50px);
     opacity: 0;
-    transition: opacity 0.3s ease;
   }
-  
-  .image:hover .caption {
+  50% {
+    transform: translateY(0);
     opacity: 1;
   }
+  100% {
+    transform: translateY(0);
+    opacity: 1; 
+  } 
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  animation: slidein 1.4s ease-in ;
+}
+
+.overlay-text h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+}
+.overlay-text h5 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top:20px;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translate(-50%, -50%) scale(.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+.morebutton {
+  border-radius: 4px;
+  background-color:transparent;
+  border: #ffffff solid 2px;
+  color: #d7780b;
+  text-align: center;
+  font-weight: bold;
+  width: 200px;
+  height: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.morebutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.morebutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.morebutton:hover span {
+  padding-right: 25px;
+}
+
+.morebutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cards{
+  transition: 1s;
   
+}
+.cards:hover{
+  transform: scale(1.3);
+  z-index: 2;
+}
 
-  .gallery {
-    position: relative; /* Add this to establish a new positioning context */
-  }
+.cards:hover .cardsb {
+  opacity: 1;
+}
 
-  .image {
-    position: relative; /* Ensure images are positioned correctly */
-    z-index: 1; /* Ensure images are on top of the video */
-  }
+.cardsb {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; /* Added left: 0 to ensure the content starts from the left */
+  opacity: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.338);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  color: black;
+  transition: opacity .5s; /* Changed transition to only affect 'transform' */
+}
+
+
+.cards {
+  overflow: hidden;
+  position: relative;
+}
+.cimg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.q{
+  font-weight: 500;
+  color: RED;
+}
+.c1 {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Equal width columns */
+  gap: 0; /* Optional: Adjust the gap between sections */
+}
+.d2h{
+  color: red;
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 0;
+}
+.d2p{
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+.v1 {
+  width: 50%;
+  margin: 3px;
+  transition: transform 0.3s ease;
+}
+
+.v1:hover {
+  transform: scale(1.1);
+}
+.cardmp:hover{
+  transform: scale(1.1);
+}
+.cardmp:hover .cardmb {
+  bottom: 0;
+  
+}
+
+.cardmb {
+  width: 100%;
+  height: 100%;
+  bottom:-100% ;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.338);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  color: black;
+  transition: bottom 1s; /* Changed transition property to only affect 'right' */
+}
+
+.cardmp {
+  overflow: hidden;
+  position: relative;
+  transition: 1s;
+}
+.card-imgmp {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
